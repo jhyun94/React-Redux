@@ -1,5 +1,12 @@
-export default function Weather(state = null, action){
-  console.log( action);
+import { FETCH_WEATHER } from '../actions/index';
+
+
+export default function Weather(state = [], action){
+
+  switch(action.type){
+    case FETCH_WEATHER: 
+      return state.concat(action.payload.data)
+  }
 
   return state;
 }
