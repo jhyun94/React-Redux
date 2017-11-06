@@ -9,6 +9,7 @@ export default class SearchBar extends Component {
     }
 
     this.onInputChange = this.onInputChange.bind(this);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
 
@@ -18,9 +19,13 @@ export default class SearchBar extends Component {
 
   }
 
+  onFormSubmit(event){
+    event.preventDefault();
+  }
+
   render(){
     return(
-      <form>
+      <form onSubmit={ this.onFormSubmit} >
         <input
           placeholder="Enter your favorite City"
           value={ this.state.term}
