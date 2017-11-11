@@ -1,4 +1,5 @@
 import axios from 'axios';
+export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 export function getWeather(city){
   const API_KEY = '54910d727745b59a701ab94e1b89230d'
@@ -9,7 +10,7 @@ export function getWeather(city){
 
 
   return {
-    type: "TEST",
+    type: FETCH_WEATHER,
     payload: request
   }
 }
