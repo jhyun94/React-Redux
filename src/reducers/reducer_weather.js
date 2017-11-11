@@ -1,4 +1,4 @@
-export default function Weather(state=null, action){
-  console.log('hello');
+export default function Weather(state=[], action){
+  console.log(action.payload);
   return state;
 }
