@@ -5,6 +5,7 @@ import { connect} from 'react-redux';
 class WeatherList extends Component {
 
   render(){
+    console.log( this.props.weather)
     return (
       <div>WeatherList</div>
     )
