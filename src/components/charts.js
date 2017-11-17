@@ -1,8 +1,11 @@
 import React from 'react';
+import { Sparklines, SparklinesLine } from 'react-sparklines';
 
 const Chart = (props) => {
   return (
-    <div>chart</div>
+    <Sparklines data={props.data}>
+      <SparklinesLine color="red" />
+    </Sparklines>
   )
 }
 

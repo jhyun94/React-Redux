@@ -7,11 +7,15 @@ class WeatherList extends Component {
 
   renderWeather(){
     return this.props.weather.map( (cityData) => {
+      console.log(cityData);
       const name = cityData.city.name;
+      const temp = cityData.list.map( (city) => {
+        return city.main.temp*(9/5)-459.67
+      })
       return (
         <tr key={name}>
           <td>{name}</td>
-          <td><Chart /></td>
+          <td><Chart data={temp}/></td>
         </tr>
       )
     })
